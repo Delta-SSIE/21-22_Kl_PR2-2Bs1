@@ -10,9 +10,9 @@ namespace _01_Uvod_01_Prohozeni_promennych
             int y = 20;
 
             // pomocná proměnná
-            //int tmp = x;
-            //x = y;
-            //y = tmp;
+            int tmp = x;
+            x = y;
+            y = tmp;
 
             // sčítání
             //x = x + y;
@@ -20,10 +20,9 @@ namespace _01_Uvod_01_Prohozeni_promennych
             //x = x - y;
 
             // xor
-
-            x = x ^ y;
-            y = x ^ y;
-            x = x ^ y;
+            //x = x ^ y;
+            //y = x ^ y;
+            //x = x ^ y;
 
             Console.WriteLine($"x: {x}, y: {y}");
 
