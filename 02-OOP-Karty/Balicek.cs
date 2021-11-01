@@ -51,12 +51,39 @@ namespace _02_OOP_Karty
             _karty.Enqueue(karta);
         }
 
+        public void PridejBalicek(Balicek dalsiKarty)
+        {
+            while (dalsiKarty.PocetKaret > 0) //dokud je co převzít
+            {
+                this.PridejDospod(dalsiKarty.VezmiHorni()); //vezmi horní z druhého balíčku a dej si dospod
+            }
+        }
+
         public void Vypis()
         {
             foreach (Karta karta in _karty)
             {
                 Console.WriteLine(karta);
             }
+        }
+
+        /// <summary>
+        /// Vytvoří a vrátí nový balíček s plnou sadou karet
+        /// </summary>
+        /// <returns>Plný balíček mariášových karet</returns>
+        public static Balicek VytvorNoveKarty()
+        {
+            Balicek noveKarty = new Balicek();
+
+            for (int b = 0; b < 4; b++)
+            {
+                for (int v = 0; v < 8; v++)
+                {
+                    noveKarty.PridejDospod(new Karta((VyskaKarty)v, (BarvaKarty)b)); // přetypování z čísla na enumeraci
+                }
+            }
+
+            return noveKarty;
         }
     }
 }

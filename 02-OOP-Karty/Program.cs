@@ -6,6 +6,32 @@ namespace _02_OOP_Karty
     {
         static void Main(string[] args)
         {
+
+            Hra hra = new Hra();
+
+            while(!hra.JeKonec)
+            {
+                System.Threading.Thread.Sleep(250);
+                string logKola = hra.Kolo();
+                Console.WriteLine(logKola);
+            }
+
+            Console.WriteLine(hra.Vysledek());
+
+        }
+
+        private static void Porovnani(Karta karta1, Karta karta2)
+        {
+            if (karta1 > karta2)
+                Console.WriteLine($"{karta1} bere {karta2}");
+            else if (karta1 < karta2)
+                Console.WriteLine($"{karta1} podlehne {karta2}");
+            else
+                Console.WriteLine($"{karta1} je stejné hodnoty jako {karta2}");
+        }
+
+        static void ArchivMain()
+        {
             Karta SrdcovaSedma = new Karta(VyskaKarty.Sedmicka, BarvaKarty.Srdce);
             Karta ZaludovejFilek = new Karta(VyskaKarty.Filek, BarvaKarty.Zaludy);
 
@@ -45,17 +71,6 @@ namespace _02_OOP_Karty
                 int nahodnyIndex = random.Next(balicek.Length);
                 Console.WriteLine(balicek[nahodnyIndex]);
             }
-
-        }
-
-        private static void Porovnani(Karta karta1, Karta karta2)
-        {
-            if (karta1 > karta2)
-                Console.WriteLine($"{karta1} bere {karta2}");
-            else if (karta1 < karta2)
-                Console.WriteLine($"{karta1} podlehne {karta2}");
-            else
-                Console.WriteLine($"{karta1} je stejné hodnoty jako {karta2}");
         }
     }
 }
