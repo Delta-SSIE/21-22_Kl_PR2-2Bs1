@@ -47,11 +47,8 @@ namespace _02_OOP_Karty
             // o co se hraje?
             Balicek kartyKola = new Balicek();
 
-            // říká, zda se má hrát dál - karty obou mají stejnou váhu
-            bool shodaKaret = true;
-
             //dokud neni nerovnost a je co brat
-            while (shodaKaret &&!JeKonec) {
+            while (!JeKonec) {
                 // oba vezmou horní kartu
                 Karta kartaA = _hracA.VezmiHorni();
                 Karta kartaB = _hracB.VezmiHorni();
@@ -66,14 +63,14 @@ namespace _02_OOP_Karty
                     log += $"Bere hráč A {kartaA} > {kartaB}.";
                     kartyKola.Zamichej();
                     _hracA.PridejBalicek(kartyKola);
-                    shodaKaret = false;
+                    break;
                 }
                 else if (kartaB > kartaA)
                 {
                     log += $"Bere hráč B {kartaA} < {kartaB}.";
                     kartyKola.Zamichej();
                     _hracB.PridejBalicek(kartyKola);
-                    shodaKaret = false;
+                    break;
                 }
                 else
                 {

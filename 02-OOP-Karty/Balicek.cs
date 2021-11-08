@@ -26,18 +26,21 @@ namespace _02_OOP_Karty
         public void Zamichej()
         {
             // vezmu všechny karty v balíčku
-            Karta[] tmp = _karty.ToArray();
+            //Karta[] tmp = _karty.ToArray();
 
-            for (int i = 0; i < tmp.Length - 1; i++)
-            {
-                int nahPoradi = _rnd.Next(i, tmp.Length);
-                
-                Karta vyndej = tmp[nahPoradi];
-                tmp[nahPoradi] = tmp[i];
-                tmp[i] = vyndej;
-            }
+            //for (int i = 0; i < tmp.Length - 1; i++)
+            //{
+            //    int nahPoradi = _rnd.Next(i, tmp.Length);
 
-            _karty = new Queue<Karta>(tmp);
+            //    Karta vyndej = tmp[nahPoradi];
+            //    tmp[nahPoradi] = tmp[i];
+            //    tmp[i] = vyndej;
+            //}
+
+            //_karty = new Queue<Karta>(tmp);
+            _karty = new Queue<Karta>(
+                _karty.ToArray().OrderBy(x => _rnd.NextDouble())
+                ) ;
         }
 
         public Karta VezmiHorni()
