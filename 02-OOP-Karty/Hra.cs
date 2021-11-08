@@ -53,7 +53,7 @@ namespace _02_OOP_Karty
                 Karta kartaA = _hracA.VezmiHorni();
                 Karta kartaB = _hracB.VezmiHorni();
 
-                // karty se zapisou do Karet kola
+                // obe karty se zapisou do Karet kola
                 kartyKola.PridejDospod(kartaA);
                 kartyKola.PridejDospod(kartaB);
 
