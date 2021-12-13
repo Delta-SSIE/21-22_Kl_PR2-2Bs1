@@ -1,0 +1,57 @@
+﻿<Window x:Class="_03_WPF_01_Hello_World.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_WPF_01_Hello_World"
+        mc:Ignorable="d"
+        Title="Hello App" Height="450" Width="400">
+    <Grid>
+        <Label x:Name="HelloLbl" 
+               Content="Hello World!" 
+               HorizontalAlignment="Left" 
+               Margin="92,67,0,0" 
+               VerticalAlignment="Top" 
+               FontFamily="Comic Sans MS" 
+               FontSize="24" 
+               FontWeight="Bold" 
+               Visibility="Visible" 
+               Foreground="Aquamarine"
+               />
+        <Button Content="Press me" 
+                HorizontalAlignment="Left" 
+                Margin="120,136,0,0" 
+                VerticalAlignment="Top" 
+                FontSize="24" 
+                Click="Button_Click"
+                />
+        <Button Content="Change color"
+                Margin="69,180,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="100"
+                Height="50"
+                x:Name="ColorBtn"
+                Click="ColorBtn_Click"
+                MouseEnter="ColorBtn_MouseEnter"
+                MouseLeave="ColorBtn_MouseLeave"
+                />
+        <TextBox HorizontalAlignment="Left" 
+                 Margin="106,284,0,0" 
+                 Text="" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="120"
+                 x:Name="InputTB"
+                 />
+        <Button Content="Zapiš" 
+                HorizontalAlignment="Left" 
+                Margin="231,283,0,0" 
+                VerticalAlignment="Top"
+                x:Name="ZapisBtn"
+                Click="ZapisBtn_Click"
+                />
+
+
+    </Grid>
+</Window>
