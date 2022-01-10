@@ -1,0 +1,22 @@
+﻿<Window x:Class="_03_WPF_10_Radiobutton_a_disable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_WPF_10_Radiobutton_a_disable"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400" Background="#f0f0f0">
+    <Grid>
+        <Label Content="Zboží" HorizontalAlignment="Left" Margin="47,38,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresa" HorizontalAlignment="Left" Margin="47,80,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="125,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <TextBox HorizontalAlignment="Left" Margin="125,88,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <CheckBox x:Name="SlevaCB" Content="Sleva" HorizontalAlignment="Left" Margin="125,129,0,0" VerticalAlignment="Top" Checked="SlevaCB_Checked" Unchecked="SlevaCB_Unchecked"/>
+        <StackPanel x:Name="TypSlevyContainer" Margin="222,129,0,0" Orientation="Vertical">
+            <RadioButton Content="Student"/>
+            <RadioButton Content="Učitel"/>
+            <RadioButton Content="Student"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
