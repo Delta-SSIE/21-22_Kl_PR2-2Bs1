@@ -8,6 +8,7 @@ namespace _03_WPF_11_Calculator
 {
     static class SimpleMath
     {
+        public enum Operation { Addition, Subtraction, Multiplication, Division }
         public static double Add(double num1, double num2)
         {
             return num1 + num2;

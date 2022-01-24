@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_03_WPF_11_Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="400">
+        Title="MainWindow" Height="450" Width="400"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        >
     <Window.Resources>
         <Thickness x:Key="BaseMargin">3</Thickness>
         <SolidColorBrush x:Key="BaseBtnColor">Black</SolidColorBrush>
@@ -62,6 +64,7 @@
                 Style="{StaticResource ACBtnStyle}"
                 Grid.Row="1"
                 Grid.Column="0"
+                Click="ACBtn_Click"
                 />
 
         <Button x:Name="PlusMinusBtn"
@@ -69,18 +72,21 @@
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="1"
                 Grid.Column="1"
+                Click="PlusMinusBtn_Click"
                 />
         <Button x:Name="PercentBtn"
                 Content="%"
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="1"
                 Grid.Column="2"
+                Click="PercentBtn_Click"
                 />
         <Button x:Name="DivisionBtn"
                 Content="/"
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="1"
                 Grid.Column="3"
+                Click="OperationBtn_Click"
                 />
         <Button x:Name="SevenBtn"
                 Content="7"
@@ -108,6 +114,7 @@
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="2"
                 Grid.Column="3"
+                Click="OperationBtn_Click"
                 />
         <Button x:Name="FourBtn"
                 Content="4"
@@ -135,6 +142,7 @@
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="3"
                 Grid.Column="3"
+                Click="OperationBtn_Click"
                 />
         <Button x:Name="OneBtn"
                 Content="1"
@@ -162,6 +170,7 @@
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="4"
                 Grid.Column="3"
+                Click="OperationBtn_Click"
                 />
         <Button x:Name="ZeroBtn"
                 Content="0"
@@ -175,6 +184,7 @@
                 Style="{StaticResource BaseBtnStyle}"
                 Grid.Row="5"
                 Grid.Column="1"
+                Click="DotBtn_Click"
                 />
         <Button x:Name="EqualsBtn"
                 Content="="
@@ -182,6 +192,7 @@
                 Grid.Row="5"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
+                Click="EqualsBtn_Click"
                 />        
     </Grid>
 </Window>
