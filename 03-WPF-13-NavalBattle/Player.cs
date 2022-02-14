@@ -11,6 +11,25 @@ namespace _03_WPF_13_NavalBattle
         private int _mapSize;
         private int _shipCount;
 
+        public Player(int mapSize, int shipCount)
+        {
+            if (mapSize < 2)
+                throw new ArgumentOutOfRangeException();
+            _mapSize = mapSize;
+
+            if (shipCount < 1)
+                throw new ArgumentOutOfRangeException();
+            _shipCount = shipCount;
+
+            if (shipCount >= mapSize * mapSize)
+                throw new ArgumentOutOfRangeException("Too many ships");
+
+            CreateSea();
+            PlaceShips();
+        }
+
+
+
         /// <summary>
         /// Holds the real state of player sea
         /// </summary>
@@ -31,7 +50,7 @@ namespace _03_WPF_13_NavalBattle
             get
             {
                 TileState[,] sea = (TileState[,])(_sea.Clone());
-                
+
                 for (int x = 0; x < _mapSize; x++)
                 {
                     for (int y = 0; y < _mapSize; y++)
@@ -59,14 +78,14 @@ namespace _03_WPF_13_NavalBattle
         private void PlaceShips()
         {
             Random rnd = new Random();
-            
+
             int placedShips = 0;
-            
+
             while (placedShips < _shipCount)
             {
                 int x = rnd.Next(_mapSize);
                 int y = rnd.Next(_mapSize);
-                if (_sea[x,y] != TileState.Ship)
+                if (_sea[x, y] != TileState.Ship)
                 {
                     _sea[x, y] = TileState.Ship;
                     placedShips++;
@@ -94,6 +113,27 @@ namespace _03_WPF_13_NavalBattle
                 default:
                     return false;
             }
+        }
+        /// <summary>
+        /// For computer - find a free tile to shoot
+        /// </summary>
+        /// <param name="opponentMap"></param>
+        /// <returns></returns>
+        public Coordinates FindTarget(TileState[,] opponentMap)
+        {
+            Random rnd = new Random();
+            Coordinates target = null;
+            do
+            {
+                int x = rnd.Next(_mapSize);
+                int y = rnd.Next(_mapSize);
+                if (opponentMap[x,y] == TileState.Sea)
+                {
+                    target = new Coordinates() { X = x, Y = y };
+                }
+            }
+            while (target == null);
+            return target;
         }
     }
 }
