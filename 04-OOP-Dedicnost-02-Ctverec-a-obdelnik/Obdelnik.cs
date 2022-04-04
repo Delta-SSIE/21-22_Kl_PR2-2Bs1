@@ -25,6 +25,9 @@ namespace _04_OOP_Dedicnost_02_Ctverec_a_obdelnik
         {
             return StranaA * StranaB;
         }
-
+        public override string ToString()
+        {
+            return $"Obdélník o stranách {StranaA} a {StranaB}";
+        }
     }
 }

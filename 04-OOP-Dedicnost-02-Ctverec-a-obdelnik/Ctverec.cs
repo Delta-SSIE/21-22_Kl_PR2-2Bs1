@@ -11,5 +11,10 @@ namespace _04_OOP_Dedicnost_02_Ctverec_a_obdelnik
         public Ctverec(double strana) : base(strana, strana)
         {
         }
+
+        public override string ToString()
+        {
+            return $"Čtverec o straně {StranaA}";
+        }
     }
 }
