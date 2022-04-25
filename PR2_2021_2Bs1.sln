@@ -93,7 +93,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-OOP-Dedicnost-01-Zoo", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-OOP-Dedicnost-02-Ctverec-a-obdelnik", "04-OOP-Dedicnost-02-Ctverec-a-obdelnik\04-OOP-Dedicnost-02-Ctverec-a-obdelnik.csproj", "{14D6BC1C-42B5-4C94-97EA-607D29AE699B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-OOP-Dedicnost-03-Pocitadlo", "04-OOP-Dedicnost-03-Pocitadlo\04-OOP-Dedicnost-03-Pocitadlo.csproj", "{721FBBBD-5CDE-45F4-9C49-41024DB65904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-OOP-Dedicnost-03-Pocitadlo", "04-OOP-Dedicnost-03-Pocitadlo\04-OOP-Dedicnost-03-Pocitadlo.csproj", "{721FBBBD-5CDE-45F4-9C49-41024DB65904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-OOP-Dedicnost-04-Firma-zamestnanci", "04-OOP-Dedicnost-04-Firma-zamestnanci\04-OOP-Dedicnost-04-Firma-zamestnanci.csproj", "{F3B47859-1251-44F1-8FF1-83595E44ED51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iface-dp", "Iface-dp\Iface-dp.csproj", "{3EEA6B52-A0FA-4968-90B6-FCE5BF08EBAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -265,6 +269,14 @@ Global
 		{721FBBBD-5CDE-45F4-9C49-41024DB65904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{721FBBBD-5CDE-45F4-9C49-41024DB65904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{721FBBBD-5CDE-45F4-9C49-41024DB65904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B47859-1251-44F1-8FF1-83595E44ED51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B47859-1251-44F1-8FF1-83595E44ED51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B47859-1251-44F1-8FF1-83595E44ED51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B47859-1251-44F1-8FF1-83595E44ED51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EEA6B52-A0FA-4968-90B6-FCE5BF08EBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EEA6B52-A0FA-4968-90B6-FCE5BF08EBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EEA6B52-A0FA-4968-90B6-FCE5BF08EBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EEA6B52-A0FA-4968-90B6-FCE5BF08EBAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -311,6 +323,8 @@ Global
 		{FB2DC5CA-948C-4465-A8E9-894F1610FC23} = {BE041BF2-DCD9-4A10-9042-E66EF3F6F3C3}
 		{14D6BC1C-42B5-4C94-97EA-607D29AE699B} = {BE041BF2-DCD9-4A10-9042-E66EF3F6F3C3}
 		{721FBBBD-5CDE-45F4-9C49-41024DB65904} = {BE041BF2-DCD9-4A10-9042-E66EF3F6F3C3}
+		{F3B47859-1251-44F1-8FF1-83595E44ED51} = {BE041BF2-DCD9-4A10-9042-E66EF3F6F3C3}
+		{3EEA6B52-A0FA-4968-90B6-FCE5BF08EBAF} = {BE041BF2-DCD9-4A10-9042-E66EF3F6F3C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6DD85F7F-1EF8-4D42-AD72-18C577265C1E}
